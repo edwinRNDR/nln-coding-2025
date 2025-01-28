@@ -35,11 +35,17 @@ ffplay "tmpHQ7DwF [01rXk7iRDwg].webm"
 
 # Recompress video using a very low bitrate
 
-A basic re-encoding to 1000 bits per second.
+A basic re-encoding to 1000 bits per second for video
 
 ```shell
 ffmpeg -i "tmpHQ7DwF [01rXk7iRDwg].webm" -b:v 1000 kapot.mp4
 ```
+
+With 100 bits per second for audio
+```shell
+ffmpeg -i "tmpHQ7DwF [01rXk7iRDwg].webm" -b:v 1000 -b:a 100 kapot.mp4
+```
+
 
 A re-encoding using very few keyframes and disabled scene cut detection.
 
