@@ -31,7 +31,7 @@ async function downloadImage(img, originalSrc) {
 imgs = [...document.getElementsByTagName("img")];
 
 imgs.forEach( e => {
-    const originalSrc = e.src
+    const originalSrc = e.src;
     function animate() {
         downloadImage(e, originalSrc);
     }
