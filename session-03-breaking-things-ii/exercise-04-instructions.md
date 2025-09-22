@@ -70,3 +70,9 @@ ffmpeg -f avfoundation -i "Capture screen 0" screen1.mp4
 ```shell
 ffmpeg -r 30  -f avfoundation -i "FaceTime HD Camera" -t 30  bla.mp4
 ```
+
+## Re-encode and preview camera
+```shell
+ffmpeg -r 30 -s 1280x720 -f avfoundation -i "0" -c:v flv1  -f nut - -b:v 10| ffplay -loglevel warning -vf setpts=0 -
+```
+
