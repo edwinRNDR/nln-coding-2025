@@ -73,6 +73,6 @@ ffmpeg -r 30  -f avfoundation -i "FaceTime HD Camera" -t 30  bla.mp4
 
 ## Re-encode and preview camera
 ```shell
-ffmpeg -r 30 -s 1280x720 -f avfoundation -i "0" -c:v flv1  -f nut - -b:v 10| ffplay -loglevel warning -vf setpts=0 -
+ffmpeg -r 30 -s 1280x720 -f avfoundation -i "0" -c:v flv1 -b:v 1000 -f nut - | ffplay -loglevel warning -vf setpts=0 -
 ```
 
